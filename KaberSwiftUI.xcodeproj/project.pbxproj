@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D332A3B42D11FEFB00EDB1AE /* NavigationPathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */; };
+		D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332A3B62D12007C00EDB1AE /* ArticleModel.swift */; };
+		D37CD9242D1191B7007CDB0A /* KaberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */; };
+		D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */; };
+		D37CD9282D1191B8007CDB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9272D1191B8007CDB0A /* Assets.xcassets */; };
+		D37CD92B2D1191B8007CDB0A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37CD92A2D1191B8007CDB0A /* Preview Assets.xcassets */; };
+		D37CD9322D119264007CDB0A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9312D119264007CDB0A /* Localizable.xcstrings */; };
+		D37CD9362D11944F007CDB0A /* KaberNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9352D11944F007CDB0A /* KaberNewsViewModel.swift */; };
+		D37CD93A2D11963F007CDB0A /* NewsComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9392D11963F007CDB0A /* NewsComponets.swift */; };
+		D37CD93D2D11A418007CDB0A /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD93C2D11A418007CDB0A /* CustomButton.swift */; };
+		D37CD9532D11A84A007CDB0A /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9402D11A84A007CDB0A /* Poppins-ExtraLight.ttf */; };
+		D37CD9542D11A84A007CDB0A /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9412D11A84A007CDB0A /* Poppins-ThinItalic.ttf */; };
+		D37CD9552D11A84B007CDB0A /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9422D11A84A007CDB0A /* Poppins-ExtraLightItalic.ttf */; };
+		D37CD9562D11A84B007CDB0A /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9432D11A84A007CDB0A /* Poppins-BoldItalic.ttf */; };
+		D37CD9572D11A84B007CDB0A /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9442D11A84A007CDB0A /* Poppins-Light.ttf */; };
+		D37CD9582D11A84B007CDB0A /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9452D11A84A007CDB0A /* Poppins-Medium.ttf */; };
+		D37CD9592D11A84B007CDB0A /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9462D11A84A007CDB0A /* Poppins-SemiBoldItalic.ttf */; };
+		D37CD95A2D11A84B007CDB0A /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9472D11A84A007CDB0A /* Poppins-ExtraBoldItalic.ttf */; };
+		D37CD95B2D11A84B007CDB0A /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9482D11A84A007CDB0A /* Poppins-ExtraBold.ttf */; };
+		D37CD95C2D11A84B007CDB0A /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9492D11A84A007CDB0A /* Poppins-BlackItalic.ttf */; };
+		D37CD95D2D11A84B007CDB0A /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94A2D11A84A007CDB0A /* OFL.txt */; };
+		D37CD95E2D11A84B007CDB0A /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94B2D11A84A007CDB0A /* Poppins-Regular.ttf */; };
+		D37CD95F2D11A84B007CDB0A /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94C2D11A84A007CDB0A /* Poppins-LightItalic.ttf */; };
+		D37CD9602D11A84B007CDB0A /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94D2D11A84A007CDB0A /* Poppins-Bold.ttf */; };
+		D37CD9612D11A84B007CDB0A /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94E2D11A84A007CDB0A /* Poppins-Black.ttf */; };
+		D37CD9622D11A84B007CDB0A /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD94F2D11A84A007CDB0A /* Poppins-Thin.ttf */; };
+		D37CD9632D11A84B007CDB0A /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9502D11A84A007CDB0A /* Poppins-SemiBold.ttf */; };
+		D37CD9642D11A84B007CDB0A /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9512D11A84A007CDB0A /* Poppins-Italic.ttf */; };
+		D37CD9652D11A84B007CDB0A /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9522D11A84A007CDB0A /* Poppins-MediumItalic.ttf */; };
+		D37CD9692D11AA0A007CDB0A /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9682D11AA0A007CDB0A /* CustomFont.swift */; };
+		D37CD96C2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */; };
+		D37CD96F2D11B059007CDB0A /* KaberNewsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathManager.swift; sourceTree = "<group>"; };
+		D332A3B62D12007C00EDB1AE /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		D332A3BA2D120A5C00EDB1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberSwiftUIApp.swift; sourceTree = "<group>"; };
+		D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsView.swift; sourceTree = "<group>"; };
+		D37CD9272D1191B8007CDB0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D37CD92A2D1191B8007CDB0A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D37CD9312D119264007CDB0A /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		D37CD9352D11944F007CDB0A /* KaberNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsViewModel.swift; sourceTree = "<group>"; };
+		D37CD9392D11963F007CDB0A /* NewsComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsComponets.swift; sourceTree = "<group>"; };
+		D37CD93C2D11A418007CDB0A /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		D37CD9402D11A84A007CDB0A /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		D37CD9412D11A84A007CDB0A /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9422D11A84A007CDB0A /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9432D11A84A007CDB0A /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9442D11A84A007CDB0A /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		D37CD9452D11A84A007CDB0A /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		D37CD9462D11A84A007CDB0A /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9472D11A84A007CDB0A /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9482D11A84A007CDB0A /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		D37CD9492D11A84A007CDB0A /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		D37CD94A2D11A84A007CDB0A /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		D37CD94B2D11A84A007CDB0A /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		D37CD94C2D11A84A007CDB0A /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		D37CD94D2D11A84A007CDB0A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		D37CD94E2D11A84A007CDB0A /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		D37CD94F2D11A84A007CDB0A /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		D37CD9502D11A84A007CDB0A /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		D37CD9512D11A84A007CDB0A /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		D37CD9522D11A84A007CDB0A /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		D37CD9682D11AA0A007CDB0A /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
+		D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsDetailsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D37CD91D2D1191B7007CDB0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D332A3B22D11FEE700EDB1AE /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		D332A3B52D12007200EDB1AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D332A3B62D12007C00EDB1AE /* ArticleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D37CD9172D1191B7007CDB0A = {
+			isa = PBXGroup;
+			children = (
+				D37CD9222D1191B7007CDB0A /* KaberSwiftUI */,
+				D37CD9212D1191B7007CDB0A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D37CD9212D1191B7007CDB0A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D37CD9222D1191B7007CDB0A /* KaberSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				D332A3BA2D120A5C00EDB1AE /* Info.plist */,
+				D332A3B22D11FEE700EDB1AE /* Starter */,
+				D332A3B52D12007200EDB1AE /* Model */,
+				D37CD9332D119431007CDB0A /* Moduls */,
+				D37CD9372D11961B007CDB0A /* Components */,
+				D37CD9662D11A85B007CDB0A /* Customs + Extension */,
+				D37CD93E2D11A83A007CDB0A /* Fonts */,
+				D37CD9312D119264007CDB0A /* Localizable.xcstrings */,
+				D37CD9272D1191B8007CDB0A /* Assets.xcassets */,
+				D37CD9292D1191B8007CDB0A /* Preview Content */,
+			);
+			path = KaberSwiftUI;
+			sourceTree = "<group>";
+		};
+		D37CD9292D1191B8007CDB0A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD92A2D1191B8007CDB0A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D37CD9332D119431007CDB0A /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9342D119437007CDB0A /* KaberNews Screen */,
+				D37CD96D2D11B048007CDB0A /* KaberNews Details Screen */,
+			);
+			path = Moduls;
+			sourceTree = "<group>";
+		};
+		D37CD9342D119437007CDB0A /* KaberNews Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9352D11944F007CDB0A /* KaberNewsViewModel.swift */,
+				D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */,
+			);
+			path = "KaberNews Screen";
+			sourceTree = "<group>";
+		};
+		D37CD9372D11961B007CDB0A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD93B2D11A40B007CDB0A /* Custom Button */,
+				D37CD9382D11962C007CDB0A /* NewsComponets */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D37CD9382D11962C007CDB0A /* NewsComponets */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9392D11963F007CDB0A /* NewsComponets.swift */,
+			);
+			path = NewsComponets;
+			sourceTree = "<group>";
+		};
+		D37CD93B2D11A40B007CDB0A /* Custom Button */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD93C2D11A418007CDB0A /* CustomButton.swift */,
+			);
+			path = "Custom Button";
+			sourceTree = "<group>";
+		};
+		D37CD93E2D11A83A007CDB0A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD93F2D11A84A007CDB0A /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D37CD93F2D11A84A007CDB0A /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD9402D11A84A007CDB0A /* Poppins-ExtraLight.ttf */,
+				D37CD9412D11A84A007CDB0A /* Poppins-ThinItalic.ttf */,
+				D37CD9422D11A84A007CDB0A /* Poppins-ExtraLightItalic.ttf */,
+				D37CD9432D11A84A007CDB0A /* Poppins-BoldItalic.ttf */,
+				D37CD9442D11A84A007CDB0A /* Poppins-Light.ttf */,
+				D37CD9452D11A84A007CDB0A /* Poppins-Medium.ttf */,
+				D37CD9462D11A84A007CDB0A /* Poppins-SemiBoldItalic.ttf */,
+				D37CD9472D11A84A007CDB0A /* Poppins-ExtraBoldItalic.ttf */,
+				D37CD9482D11A84A007CDB0A /* Poppins-ExtraBold.ttf */,
+				D37CD9492D11A84A007CDB0A /* Poppins-BlackItalic.ttf */,
+				D37CD94A2D11A84A007CDB0A /* OFL.txt */,
+				D37CD94B2D11A84A007CDB0A /* Poppins-Regular.ttf */,
+				D37CD94C2D11A84A007CDB0A /* Poppins-LightItalic.ttf */,
+				D37CD94D2D11A84A007CDB0A /* Poppins-Bold.ttf */,
+				D37CD94E2D11A84A007CDB0A /* Poppins-Black.ttf */,
+				D37CD94F2D11A84A007CDB0A /* Poppins-Thin.ttf */,
+				D37CD9502D11A84A007CDB0A /* Poppins-SemiBold.ttf */,
+				D37CD9512D11A84A007CDB0A /* Poppins-Italic.ttf */,
+				D37CD9522D11A84A007CDB0A /* Poppins-MediumItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		D37CD9662D11A85B007CDB0A /* Customs + Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */,
+				D37CD9682D11AA0A007CDB0A /* CustomFont.swift */,
+				D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */,
+			);
+			path = "Customs + Extension";
+			sourceTree = "<group>";
+		};
+		D37CD96D2D11B048007CDB0A /* KaberNews Details Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */,
+			);
+			path = "KaberNews Details Screen";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D37CD91F2D1191B7007CDB0A /* KaberSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D37CD92E2D1191B8007CDB0A /* Build configuration list for PBXNativeTarget "KaberSwiftUI" */;
+			buildPhases = (
+				D37CD91C2D1191B7007CDB0A /* Sources */,
+				D37CD91D2D1191B7007CDB0A /* Frameworks */,
+				D37CD91E2D1191B7007CDB0A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaberSwiftUI;
+			productName = KaberSwiftUI;
+			productReference = D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D37CD9182D1191B7007CDB0A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D37CD91F2D1191B7007CDB0A = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = D37CD91B2D1191B7007CDB0A /* Build configuration list for PBXProject "KaberSwiftUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ar,
+			);
+			mainGroup = D37CD9172D1191B7007CDB0A;
+			productRefGroup = D37CD9212D1191B7007CDB0A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D37CD91F2D1191B7007CDB0A /* KaberSwiftUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D37CD91E2D1191B7007CDB0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37CD9622D11A84B007CDB0A /* Poppins-Thin.ttf in Resources */,
+				D37CD9652D11A84B007CDB0A /* Poppins-MediumItalic.ttf in Resources */,
+				D37CD95D2D11A84B007CDB0A /* OFL.txt in Resources */,
+				D37CD9552D11A84B007CDB0A /* Poppins-ExtraLightItalic.ttf in Resources */,
+				D37CD95C2D11A84B007CDB0A /* Poppins-BlackItalic.ttf in Resources */,
+				D37CD9532D11A84A007CDB0A /* Poppins-ExtraLight.ttf in Resources */,
+				D37CD9632D11A84B007CDB0A /* Poppins-SemiBold.ttf in Resources */,
+				D37CD9562D11A84B007CDB0A /* Poppins-BoldItalic.ttf in Resources */,
+				D37CD9572D11A84B007CDB0A /* Poppins-Light.ttf in Resources */,
+				D37CD9612D11A84B007CDB0A /* Poppins-Black.ttf in Resources */,
+				D37CD9642D11A84B007CDB0A /* Poppins-Italic.ttf in Resources */,
+				D37CD95B2D11A84B007CDB0A /* Poppins-ExtraBold.ttf in Resources */,
+				D37CD95F2D11A84B007CDB0A /* Poppins-LightItalic.ttf in Resources */,
+				D37CD92B2D1191B8007CDB0A /* Preview Assets.xcassets in Resources */,
+				D37CD9592D11A84B007CDB0A /* Poppins-SemiBoldItalic.ttf in Resources */,
+				D37CD95E2D11A84B007CDB0A /* Poppins-Regular.ttf in Resources */,
+				D37CD95A2D11A84B007CDB0A /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				D37CD9602D11A84B007CDB0A /* Poppins-Bold.ttf in Resources */,
+				D37CD9542D11A84A007CDB0A /* Poppins-ThinItalic.ttf in Resources */,
+				D37CD9582D11A84B007CDB0A /* Poppins-Medium.ttf in Resources */,
+				D37CD9282D1191B8007CDB0A /* Assets.xcassets in Resources */,
+				D37CD9322D119264007CDB0A /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D37CD91C2D1191B7007CDB0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D37CD96F2D11B059007CDB0A /* KaberNewsDetailsView.swift in Sources */,
+				D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */,
+				D37CD9362D11944F007CDB0A /* KaberNewsViewModel.swift in Sources */,
+				D37CD96C2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift in Sources */,
+				D37CD9242D1191B7007CDB0A /* KaberSwiftUIApp.swift in Sources */,
+				D37CD9692D11AA0A007CDB0A /* CustomFont.swift in Sources */,
+				D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */,
+				D332A3B42D11FEFB00EDB1AE /* NavigationPathManager.swift in Sources */,
+				D37CD93A2D11963F007CDB0A /* NewsComponets.swift in Sources */,
+				D37CD93D2D11A418007CDB0A /* CustomButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D37CD92C2D1191B8007CDB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D37CD92D2D1191B8007CDB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D37CD92F2D1191B8007CDB0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KaberSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = X4YZSY77G5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KaberSwiftUI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myorganization199.KaberSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D37CD9302D1191B8007CDB0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KaberSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = X4YZSY77G5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KaberSwiftUI/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myorganization199.KaberSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D37CD91B2D1191B7007CDB0A /* Build configuration list for PBXProject "KaberSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37CD92C2D1191B8007CDB0A /* Debug */,
+				D37CD92D2D1191B8007CDB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D37CD92E2D1191B8007CDB0A /* Build configuration list for PBXNativeTarget "KaberSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37CD92F2D1191B8007CDB0A /* Debug */,
+				D37CD9302D1191B8007CDB0A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D37CD9182D1191B7007CDB0A /* Project object */;
+}
