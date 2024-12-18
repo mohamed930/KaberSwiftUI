@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import BetterSafariView
 
 struct KaberNewsDetailsView: View {
     
+    @ObservedObject var viewmodel: KaberNewsDetailsViewModel
     @EnvironmentObject var navigationManager: NavigationPathManager
     
     var body: some View {
@@ -23,10 +25,10 @@ struct KaberNewsDetailsView: View {
                         .frame(width: 50)
                     
                     VStack(alignment: .leading) {
-                        Text("BBC News")
+                        Text(viewmodel.article.author ?? "unkown")
                             .setFont(fontName: .semiBold, size: 16)
                         
-                        Text("14m ago")
+                        Text(viewmodel.article.publishedAt)
                             .setFont(fontName: .semiBold, size: 14)
                             .foregroundStyle(Color("#4E4B66"))
                     }
@@ -37,25 +39,28 @@ struct KaberNewsDetailsView: View {
                 .padding(.horizontal,10)
                 
                 
-                Image(.newsImages)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 380,height: 248)
-                    .clipShape(.rect(cornerRadii: .init(topLeading: 6, bottomLeading: 6, bottomTrailing: 6, topTrailing: 6)))
+                CustomAsyncImage(img: viewmodel.article.urlToImage ?? "") { img in
+                    img
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 380,height: 248)
+                        .clipShape(.rect(cornerRadii: .init(topLeading: 6, bottomLeading: 6, bottomTrailing: 6, topTrailing: 6)))
+                }
+                    
                 
-                Text("Ukraine's President Zelensky to BBC: Blood money being paid for Russian oil")
+                Text(viewmodel.article.title)
                     .padding(.leading,6)
                     .setFont(fontName: .regular, size: 24)
                 
                 
-                Text("Ukrainian President Volodymyr Zelensky has accused European countries that continue to buy Russian oil of \"earning their money in other people's blood\".\n\nIn an interview with the BBC, President Zelensky singled out Germany and Hungary, accusing them of blocking efforts to embargo energy sales, from which Russia stands to make up to £250bn ($326bn) this year.")
+                Text(viewmodel.article.content)
                     .padding(.leading,6)
                     .setFont(fontName: .regular, size: 16)
                     .foregroundStyle(Color("#4E4B66"))
                     .padding(.bottom,30)
                 
                 CustomButton(buttonTitle: "Read More") {
-                    print("Button Tapped")
+                    viewmodel.showSafari = true
                 }
                 
                 Spacer()
@@ -67,7 +72,7 @@ struct KaberNewsDetailsView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: {
-                    print("Right button tapped!")
+                    viewmodel.shareContent()
                 }) {
                     Image(.share)
                         .resizable()
@@ -77,10 +82,30 @@ struct KaberNewsDetailsView: View {
                 .frame(width: 50,height: 50)
             }
         }
+        .safariView(isPresented: $viewmodel.showSafari) {
+            SafariView(
+                url: URL(string: viewmodel.article.url)!,
+                configuration: SafariView.Configuration(
+                    entersReaderIfAvailable: false,
+                    barCollapsingEnabled: true
+                )
+            )
+        }
         
     }
 }
 
 #Preview {
-    KaberNewsDetailsView()
+    KaberNewsDetailsView(viewmodel: KaberNewsDetailsViewModel(article: ArticleModel(
+        connection: true,
+        source: SourceModel(id: "techcrunch", name: "TechCrunch"),
+        author: "John Doe",
+        title: "SwiftUI for Beginners: A Comprehensive Guide",
+        description: "Learn how to build stunning iOS applications with SwiftUI in this beginner-friendly guide.",
+        url: "https://techcrunch.com/swiftui-beginners-guide",
+        urlToImage: "https://i.imgur.com/6YHcXoE.jpg",
+        urlToImageData: nil,
+        publishedAt: "2024-12-18T10:30:00Z",
+        content: "SwiftUI is a modern framework by Apple for building user interfaces..."
+    )))
 }

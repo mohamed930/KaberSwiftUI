@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D332A3B42D11FEFB00EDB1AE /* NavigationPathManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */; };
 		D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332A3B62D12007C00EDB1AE /* ArticleModel.swift */; };
+		D36FA3B02D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FA3AF2D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift */; };
+		D36FA3B22D134D4C002B9EA3 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FA3B12D134D4C002B9EA3 /* ShareSheet.swift */; };
 		D37CD9242D1191B7007CDB0A /* KaberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */; };
 		D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */; };
 		D37CD9282D1191B8007CDB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9272D1191B8007CDB0A /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPathManager.swift; sourceTree = "<group>"; };
 		D332A3B62D12007C00EDB1AE /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		D332A3BA2D120A5C00EDB1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D36FA3AF2D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsDetailsViewModel.swift; sourceTree = "<group>"; };
+		D36FA3B12D134D4C002B9EA3 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
 		D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberSwiftUIApp.swift; sourceTree = "<group>"; };
 		D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsView.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 				D37CD9682D11AA0A007CDB0A /* CustomFont.swift */,
 				D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */,
 				D38855862D12E40F00596C9C /* LoaderHandle.swift */,
+				D36FA3B12D134D4C002B9EA3 /* ShareSheet.swift */,
 			);
 			path = "Customs + Extension";
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */,
+				D36FA3AF2D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift */,
 			);
 			path = "KaberNews Details Screen";
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 			files = (
 				D37CD96F2D11B059007CDB0A /* KaberNewsDetailsView.swift in Sources */,
 				D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */,
+				D36FA3B02D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift in Sources */,
 				D37CD9362D11944F007CDB0A /* KaberNewsViewModel.swift in Sources */,
 				D37CD96C2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift in Sources */,
 				D388557C2D12DC1300596C9C /* NewsNetworking.swift in Sources */,
@@ -439,6 +446,7 @@
 				D37CD9692D11AA0A007CDB0A /* CustomFont.swift in Sources */,
 				D38855822D12DE8300596C9C /* CustomAsyncImage.swift in Sources */,
 				D38855792D12DBED00596C9C /* Response.swift in Sources */,
+				D36FA3B22D134D4C002B9EA3 /* ShareSheet.swift in Sources */,
 				D388556A2D12DBED00596C9C /* Target.swift in Sources */,
 				D38855802D12DCD300596C9C /* NewsAPI.swift in Sources */,
 				D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */,

@@ -2,6 +2,7 @@
   "sourceLanguage" : "en",
   "strings" : {
     "14m ago" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -18,6 +19,7 @@
       }
     },
     "BBC News" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -34,6 +36,7 @@
       }
     },
     "Invalid index" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -135,6 +138,7 @@
       }
     },
     "Ukraine's President Zelensky to BBC: Blood money being paid for Russian oil" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -151,6 +155,7 @@
       }
     },
     "Ukrainian President Volodymyr Zelensky has accused European countries that continue to buy Russian oil of \"earning their money in other people's blood\".\n\nIn an interview with the BBC, President Zelensky singled out Germany and Hungary, accusing them of blocking efforts to embargo energy sales, from which Russia stands to make up to £250bn ($326bn) this year." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

@@ -52,7 +52,7 @@ struct KaberNewsView: View {
                                 }
                                 .onTapGesture {
                                     let selected = viewmodel.selectElement(index: index)
-                                    navigationManager.path.append(index)
+                                    navigationManager.path.append(selected)
                                 }
                             }
                         }
@@ -73,14 +73,8 @@ struct KaberNewsView: View {
                     }
                 }
             }
-            .navigationDestination(for: Int.self) { selectedNewsArticle in
-                
-                if selectedNewsArticle < viewmodel.newsItems.count {
-                    KaberNewsDetailsView()
-                } else {
-                    Text("Invalid index")
-                }
-                
+            .navigationDestination(for: ArticleModel.self) { article in
+                KaberNewsDetailsView(viewmodel: KaberNewsDetailsViewModel(article: article))
             }
             .safariView(isPresented: $viewmodel.showSafari) {
                 SafariView(

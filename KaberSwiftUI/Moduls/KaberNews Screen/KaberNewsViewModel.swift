@@ -46,16 +46,7 @@ class KaberNewsViewModel: ObservableObject {
     }
     
     func selectElement(index: Int) -> ArticleModel {
-        let selectedElement = ArticleModel(connection: false,
-                                source: SourceModel(id: "1", name: ""),
-                                author: "",
-                                title: "",
-                                description: "",
-                                url: "",
-                                urlToImage: "",
-                                urlToImageData: Data(),
-                                publishedAt: "",
-                                content: "")
+        let selectedElement = newsItems[index]
         
         return selectedElement
     }
