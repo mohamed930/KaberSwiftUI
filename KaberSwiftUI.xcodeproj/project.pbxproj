@@ -39,6 +39,17 @@
 		D37CD9692D11AA0A007CDB0A /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9682D11AA0A007CDB0A /* CustomFont.swift */; };
 		D37CD96C2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */; };
 		D37CD96F2D11B059007CDB0A /* KaberNewsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */; };
+		D38855692D12DBED00596C9C /* BaseApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388554E2D12DBED00596C9C /* BaseApi.swift */; };
+		D388556A2D12DBED00596C9C /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388554F2D12DBED00596C9C /* Target.swift */; };
+		D38855782D12DBED00596C9C /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38855662D12DBED00596C9C /* ErrorMessage.swift */; };
+		D38855792D12DBED00596C9C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38855682D12DBED00596C9C /* Response.swift */; };
+		D388557C2D12DC1300596C9C /* NewsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388557B2D12DC1300596C9C /* NewsNetworking.swift */; };
+		D388557E2D12DC6E00596C9C /* constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388557D2D12DC6E00596C9C /* constans.swift */; };
+		D38855802D12DCD300596C9C /* NewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388557F2D12DCD300596C9C /* NewsAPI.swift */; };
+		D38855822D12DE8300596C9C /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38855812D12DE8300596C9C /* CustomAsyncImage.swift */; };
+		D38855852D12E3BE00596C9C /* RappleProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = D38855842D12E3BE00596C9C /* RappleProgressHUD */; };
+		D38855872D12E40F00596C9C /* LoaderHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38855862D12E40F00596C9C /* LoaderHandle.swift */; };
+		D388558C2D12EE8700596C9C /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = D388558B2D12EE8700596C9C /* BetterSafariView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +87,15 @@
 		D37CD9682D11AA0A007CDB0A /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
 		D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
 		D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsDetailsView.swift; sourceTree = "<group>"; };
+		D388554E2D12DBED00596C9C /* BaseApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApi.swift; sourceTree = "<group>"; };
+		D388554F2D12DBED00596C9C /* Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		D38855662D12DBED00596C9C /* ErrorMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		D38855682D12DBED00596C9C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D388557B2D12DC1300596C9C /* NewsNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNetworking.swift; sourceTree = "<group>"; };
+		D388557D2D12DC6E00596C9C /* constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constans.swift; sourceTree = "<group>"; };
+		D388557F2D12DCD300596C9C /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
+		D38855812D12DE8300596C9C /* CustomAsyncImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
+		D38855862D12E40F00596C9C /* LoaderHandle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderHandle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +103,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38855852D12E3BE00596C9C /* RappleProgressHUD in Frameworks */,
+				D388558C2D12EE8700596C9C /* BetterSafariView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,12 +119,12 @@
 			path = Starter;
 			sourceTree = "<group>";
 		};
-		D332A3B52D12007200EDB1AE /* Model */ = {
+		D332A3B52D12007200EDB1AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				D332A3B62D12007C00EDB1AE /* ArticleModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		D37CD9172D1191B7007CDB0A = {
@@ -126,7 +148,8 @@
 			children = (
 				D332A3BA2D120A5C00EDB1AE /* Info.plist */,
 				D332A3B22D11FEE700EDB1AE /* Starter */,
-				D332A3B52D12007200EDB1AE /* Model */,
+				D388554C2D12DBED00596C9C /* Network layer */,
+				D332A3B52D12007200EDB1AE /* Models */,
 				D37CD9332D119431007CDB0A /* Moduls */,
 				D37CD9372D11961B007CDB0A /* Components */,
 				D37CD9662D11A85B007CDB0A /* Customs + Extension */,
@@ -226,9 +249,11 @@
 		D37CD9662D11A85B007CDB0A /* Customs + Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D38855812D12DE8300596C9C /* CustomAsyncImage.swift */,
 				D332A3B32D11FEFB00EDB1AE /* NavigationPathManager.swift */,
 				D37CD9682D11AA0A007CDB0A /* CustomFont.swift */,
 				D37CD96B2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift */,
+				D38855862D12E40F00596C9C /* LoaderHandle.swift */,
 			);
 			path = "Customs + Extension";
 			sourceTree = "<group>";
@@ -239,6 +264,68 @@
 				D37CD96E2D11B059007CDB0A /* KaberNewsDetailsView.swift */,
 			);
 			path = "KaberNews Details Screen";
+			sourceTree = "<group>";
+		};
+		D388554C2D12DBED00596C9C /* Network layer */ = {
+			isa = PBXGroup;
+			children = (
+				D388554D2D12DBED00596C9C /* Base */,
+				D38855502D12DBED00596C9C /* Constans */,
+				D38855522D12DBED00596C9C /* Endpoints */,
+				D38855652D12DBED00596C9C /* Error */,
+				D38855672D12DBED00596C9C /* model */,
+			);
+			path = "Network layer";
+			sourceTree = "<group>";
+		};
+		D388554D2D12DBED00596C9C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D388554E2D12DBED00596C9C /* BaseApi.swift */,
+				D388554F2D12DBED00596C9C /* Target.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D38855502D12DBED00596C9C /* Constans */ = {
+			isa = PBXGroup;
+			children = (
+				D388557D2D12DC6E00596C9C /* constans.swift */,
+			);
+			path = Constans;
+			sourceTree = "<group>";
+		};
+		D38855522D12DBED00596C9C /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				D388557A2D12DBFE00596C9C /* News endpoint */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		D38855652D12DBED00596C9C /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				D38855662D12DBED00596C9C /* ErrorMessage.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		D38855672D12DBED00596C9C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D38855682D12DBED00596C9C /* Response.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		D388557A2D12DBFE00596C9C /* News endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				D388557B2D12DC1300596C9C /* NewsNetworking.swift */,
+				D388557F2D12DCD300596C9C /* NewsAPI.swift */,
+			);
+			path = "News endpoint";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +344,10 @@
 			dependencies = (
 			);
 			name = KaberSwiftUI;
+			packageProductDependencies = (
+				D38855842D12E3BE00596C9C /* RappleProgressHUD */,
+				D388558B2D12EE8700596C9C /* BetterSafariView */,
+			);
 			productName = KaberSwiftUI;
 			productReference = D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -286,6 +377,10 @@
 				ar,
 			);
 			mainGroup = D37CD9172D1191B7007CDB0A;
+			packageReferences = (
+				D38855832D12E3BE00596C9C /* XCRemoteSwiftPackageReference "RappleProgressHUD" */,
+				D388558A2D12EE8700596C9C /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+			);
 			productRefGroup = D37CD9212D1191B7007CDB0A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -336,10 +431,19 @@
 				D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */,
 				D37CD9362D11944F007CDB0A /* KaberNewsViewModel.swift in Sources */,
 				D37CD96C2D11AD4A007CDB0A /* DismissKeyboardOnTap.swift in Sources */,
+				D388557C2D12DC1300596C9C /* NewsNetworking.swift in Sources */,
+				D38855872D12E40F00596C9C /* LoaderHandle.swift in Sources */,
+				D388557E2D12DC6E00596C9C /* constans.swift in Sources */,
+				D38855782D12DBED00596C9C /* ErrorMessage.swift in Sources */,
 				D37CD9242D1191B7007CDB0A /* KaberSwiftUIApp.swift in Sources */,
 				D37CD9692D11AA0A007CDB0A /* CustomFont.swift in Sources */,
+				D38855822D12DE8300596C9C /* CustomAsyncImage.swift in Sources */,
+				D38855792D12DBED00596C9C /* Response.swift in Sources */,
+				D388556A2D12DBED00596C9C /* Target.swift in Sources */,
+				D38855802D12DCD300596C9C /* NewsAPI.swift in Sources */,
 				D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */,
 				D332A3B42D11FEFB00EDB1AE /* NavigationPathManager.swift in Sources */,
+				D38855692D12DBED00596C9C /* BaseApi.swift in Sources */,
 				D37CD93A2D11963F007CDB0A /* NewsComponets.swift in Sources */,
 				D37CD93D2D11A418007CDB0A /* CustomButton.swift in Sources */,
 			);
@@ -551,6 +655,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D38855832D12E3BE00596C9C /* XCRemoteSwiftPackageReference "RappleProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rjeprasad/RappleProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.1.0;
+			};
+		};
+		D388558A2D12EE8700596C9C /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D38855842D12E3BE00596C9C /* RappleProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D38855832D12E3BE00596C9C /* XCRemoteSwiftPackageReference "RappleProgressHUD" */;
+			productName = RappleProgressHUD;
+		};
+		D388558B2D12EE8700596C9C /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D388558A2D12EE8700596C9C /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D37CD9182D1191B7007CDB0A /* Project object */;
 }

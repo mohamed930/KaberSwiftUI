@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BetterSafariView
 
 struct KaberNewsView: View {
     
@@ -44,8 +45,10 @@ struct KaberNewsView: View {
                         LazyVStack(spacing: 16) {
                             ForEach(viewmodel.newsItems.indices, id: \.self) { index in
                                 
-                                NewsComponets {
-                                    print("Read More tapped!")
+                                NewsComponets(articleModel: $viewmodel.newsItems[index]) {
+                                    
+                                    viewmodel.returnUrl(selectedIndex: index)
+                                    
                                 }
                                 .onTapGesture {
                                     let selected = viewmodel.selectElement(index: index)
@@ -62,6 +65,14 @@ struct KaberNewsView: View {
             }
             .padding(.vertical)
             .padding(.horizontal,20)
+            .handleLoading(isLoading: $viewmodel.isloading)
+            .onAppear {
+                Task { @MainActor in
+                    if !viewmodel.dataFetched {
+                        await viewmodel.fetchData()
+                    }
+                }
+            }
             .navigationDestination(for: Int.self) { selectedNewsArticle in
                 
                 if selectedNewsArticle < viewmodel.newsItems.count {
@@ -70,6 +81,15 @@ struct KaberNewsView: View {
                     Text("Invalid index")
                 }
                 
+            }
+            .safariView(isPresented: $viewmodel.showSafari) {
+                SafariView(
+                    url: viewmodel.selectedUrl!,
+                    configuration: SafariView.Configuration(
+                        entersReaderIfAvailable: false,
+                        barCollapsingEnabled: true
+                    )
+                )
             }
         }
     }
