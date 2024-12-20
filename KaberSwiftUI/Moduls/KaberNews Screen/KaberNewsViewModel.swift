@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @MainActor
 class KaberNewsViewModel: ObservableObject {
@@ -20,8 +21,35 @@ class KaberNewsViewModel: ObservableObject {
     @Published var newsItems: [ArticleModel] = []
     @Published var selectedUrl: URL?
     @Published var showSafari: Bool = false
+    @Published var showConnectionError: Bool = false
+    
+    private var cancellables = Set<AnyCancellable>()
     
     func fetchData(q: String = "*") async {
+        
+        ShardCheckConnection.shared.connectionStatusObservable.sink(receiveValue: { [weak self] connection in
+            guard let self = self else { return }
+            
+            switch connection {
+                case .unspecified, .error, .disconnected:
+                    self.showConnectionError = true
+                    let local: LocalStorageProtocol = LocalStorage()
+                    if let articles: [ArticleModel] = local.valueStoreable(key: LocalStorageKeys.articles) {
+                        self.newsItems = articles
+                    }
+                case .connected:
+                    self.showConnectionError = false
+                    Task { @MainActor in
+                        await self.fetchDataOnline()
+                    }
+                    
+            }
+            
+        }).store(in: &cancellables)
+        
+    }
+    
+    private func fetchDataOnline(q: String = "*") async {
         do {
             isloading = true
             let response = try await api.fetchAllArticles(q: q, page: page, language: "en")
@@ -31,6 +59,11 @@ class KaberNewsViewModel: ObservableObject {
                 
                 self.isloading = false
                 self.newsItems = response.articles
+                
+                // Cache articles.
+                let local: LocalStorageProtocol = LocalStorage()
+                local.writeStoreable(key: LocalStorageKeys.articles, value: response.articles)
+                
                 self.dataFetched = true
             }
             
