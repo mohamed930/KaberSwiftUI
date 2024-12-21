@@ -12,7 +12,7 @@ import Combine
 class KaberNewsViewModel: ObservableObject {
     
     private let api = NewsAPI()
-    private let page: Int = 1
+    private var page: Int = 1
     
     @Published var searchText: String = ""
     
@@ -22,6 +22,8 @@ class KaberNewsViewModel: ObservableObject {
     @Published var selectedUrl: URL?
     @Published var showSafari: Bool = false
     @Published var showConnectionError: Bool = false
+    
+    @Published var showMoreLoading: Bool = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -49,20 +51,40 @@ class KaberNewsViewModel: ObservableObject {
         
     }
     
-    private func fetchDataOnline(q: String = "*") async {
+    func fetchMoreData() async {
+        page += 1
+        showMoreLoading = true
+        await fetchDataOnline(isShowMore: true)
+    }
+    
+    private func fetchDataOnline(q: String = "*",isShowMore: Bool = false) async {
         do {
-            isloading = true
+            if isShowMore {
+                showMoreLoading = true
+            }
+            else {
+                isloading = true
+            }
+            
             let response = try await api.fetchAllArticles(q: q, page: page, language: "en")
             
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
                 
                 self.isloading = false
-                self.newsItems = response.articles
+                self.showMoreLoading = false
+                if self.newsItems.isEmpty {
+                    self.newsItems = response.articles
+                }
+                else {
+                    self.newsItems += response.articles
+                }
                 
                 // Cache articles.
-                let local: LocalStorageProtocol = LocalStorage()
-                local.writeStoreable(key: LocalStorageKeys.articles, value: response.articles)
+                if page <= 2 {
+                    let local: LocalStorageProtocol = LocalStorage()
+                    local.writeStoreable(key: LocalStorageKeys.articles, value: response.articles)
+                }
                 
                 self.dataFetched = true
             }
@@ -72,6 +94,7 @@ class KaberNewsViewModel: ObservableObject {
                 guard let self = self else { return }
                 
                 self.isloading = false
+                self.showMoreLoading = false
             }
             
             print(error.localizedDescription)

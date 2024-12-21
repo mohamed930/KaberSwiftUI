@@ -56,10 +56,20 @@ struct KaberNewsView: View {
                                         let selected = viewmodel.selectElement(index: index)
                                         navigationManager.path.append(selected)
                                     }
+                                    .onAppear {
+                                        if index == viewmodel.newsItems.count - 1 {
+                                            print("Reached the last element")
+                                            Task {
+                                                await viewmodel.fetchMoreData()
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
                         .scrollDismissesKeyboard(.immediately)
+            
+                        LoadingComponents(isloading: $viewmodel.showMoreLoading)
                         
                     }
                     
@@ -102,5 +112,9 @@ struct KaberNewsView: View {
 }
 
 #Preview {
-    KaberNewsView()
+    // Provide a mock NavigationPathManager
+    let navigationManager = NavigationPathManager()
+    
+    return KaberNewsView()
+        .environmentObject(navigationManager) // Inject environment object
 }

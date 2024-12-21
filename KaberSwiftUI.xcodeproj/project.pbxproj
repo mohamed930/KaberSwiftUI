@@ -11,6 +11,7 @@
 		D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D332A3B62D12007C00EDB1AE /* ArticleModel.swift */; };
 		D36FA3B02D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FA3AF2D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift */; };
 		D36FA3B22D134D4C002B9EA3 /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36FA3B12D134D4C002B9EA3 /* ShareSheet.swift */; };
+		D3730F272D16D6CA00CF901A /* LoadingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3730F262D16D6CA00CF901A /* LoadingComponents.swift */; };
 		D37CD9242D1191B7007CDB0A /* KaberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */; };
 		D37CD9262D1191B7007CDB0A /* KaberNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */; };
 		D37CD9282D1191B8007CDB0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37CD9272D1191B8007CDB0A /* Assets.xcassets */; };
@@ -65,6 +66,7 @@
 		D332A3BA2D120A5C00EDB1AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D36FA3AF2D13498A002B9EA3 /* KaberNewsDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsDetailsViewModel.swift; sourceTree = "<group>"; };
 		D36FA3B12D134D4C002B9EA3 /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		D3730F262D16D6CA00CF901A /* LoadingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingComponents.swift; sourceTree = "<group>"; };
 		D37CD9202D1191B7007CDB0A /* KaberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37CD9232D1191B7007CDB0A /* KaberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberSwiftUIApp.swift; sourceTree = "<group>"; };
 		D37CD9252D1191B7007CDB0A /* KaberNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaberNewsView.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D3730F252D16D6B500CF901A /* Loading Componets */ = {
+			isa = PBXGroup;
+			children = (
+				D3730F262D16D6CA00CF901A /* LoadingComponents.swift */,
+			);
+			path = "Loading Componets";
+			sourceTree = "<group>";
+		};
 		D37CD9172D1191B7007CDB0A = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		D37CD9372D11961B007CDB0A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3730F252D16D6B500CF901A /* Loading Componets */,
 				D39EA0AD2D158D92006D9027 /* Error Componets */,
 				D37CD93B2D11A40B007CDB0A /* Custom Button */,
 				D37CD9382D11962C007CDB0A /* NewsComponets */,
@@ -481,6 +492,7 @@
 				D37CD93A2D11963F007CDB0A /* NewsComponets.swift in Sources */,
 				D39EA0AC2D15861D006D9027 /* LocalStorage.swift in Sources */,
 				D37CD93D2D11A418007CDB0A /* CustomButton.swift in Sources */,
+				D3730F272D16D6CA00CF901A /* LoadingComponents.swift in Sources */,
 				D39EA0AA2D158283006D9027 /* ShardCheckConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
