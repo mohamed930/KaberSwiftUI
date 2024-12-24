@@ -66,7 +66,7 @@ class KaberNewsViewModel: ObservableObject {
                 isloading = true
             }
             
-            let response = try await api.fetchAllArticles(q: q, page: page, language: "en")
+            let response = try await api.fetchAllArticles(q: q, page: page, language: api.getAppLanguage())
             
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }

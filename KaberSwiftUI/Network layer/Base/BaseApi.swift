@@ -168,3 +168,14 @@ class BaseAPI<T:TargetType> {
         }
     }
 }
+
+extension BaseAPI {
+    
+    func getAppLanguage() -> String {
+        if let languageCode = Locale.current.language.languageCode?.identifier {
+            return languageCode
+        }
+        // Fallback to "en" if no language is found
+        return "en"
+    }
+}

@@ -22,7 +22,7 @@ struct ErrorView: View {
                 .font(.system(size: 16, weight: .medium))
         }
         .padding()
-        .background(Color.red)
+        .background(Color(.errorDark))
         .cornerRadius(8)
         .opacity(showError ? 1.0 : 0.0)
         .onTapGesture {

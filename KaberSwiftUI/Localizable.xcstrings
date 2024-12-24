@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+      "shouldTranslate" : false
+    },
     "14m ago" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -14,6 +17,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "14m ago"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "Article details" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تفاصيل المقاله"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Article Details"
           }
         }
       }
@@ -33,7 +53,8 @@
             "value" : "BBC News"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Invalid index" : {
       "extractionState" : "stale",
@@ -50,7 +71,8 @@
             "value" : "Invalid index"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Key" : {
       "extractionState" : "manual",
@@ -138,7 +160,14 @@
       }
     },
     "There is no connection" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا يوجد اتصال بشبكة الانترنت"
+          }
+        }
+      }
     },
     "Ukraine's President Zelensky to BBC: Blood money being paid for Russian oil" : {
       "extractionState" : "stale",
@@ -155,7 +184,8 @@
             "value" : "Ukraine's President Zelensky to BBC: Blood money being paid for Russian oil"
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     },
     "Ukrainian President Volodymyr Zelensky has accused European countries that continue to buy Russian oil of \"earning their money in other people's blood\".\n\nIn an interview with the BBC, President Zelensky singled out Germany and Hungary, accusing them of blocking efforts to embargo energy sales, from which Russia stands to make up to £250bn ($326bn) this year." : {
       "extractionState" : "stale",
@@ -172,7 +202,8 @@
             "value" : "Ukrainian President Volodymyr Zelensky has accused European countries that continue to buy Russian oil of \"earning their money in other people's blood\".\n\nIn an interview with the BBC, President Zelensky singled out Germany and Hungary, accusing them of blocking efforts to embargo energy sales, from which Russia stands to make up to £250bn ($326bn) this year."
           }
         }
-      }
+      },
+      "shouldTranslate" : false
     }
   },
   "version" : "1.0"

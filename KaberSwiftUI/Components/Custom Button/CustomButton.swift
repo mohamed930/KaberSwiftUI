@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomButton: View {
     
-    var buttonTitle: String
+    var buttonTitle: LocalizedStringKey
     var action: () -> ()
     
     

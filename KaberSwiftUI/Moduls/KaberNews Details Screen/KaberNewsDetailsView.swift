@@ -15,82 +15,89 @@ struct KaberNewsDetailsView: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack(alignment: .leading,spacing: 16) {
-                
-                HStack {
-                    Image(.newsAuthor)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50)
+        ZStack {
+            
+            Color(.backgroundScreen)
+                .ignoresSafeArea(.all)
+            
+            ScrollView {
+                VStack(alignment: .leading,spacing: 16) {
                     
-                    VStack(alignment: .leading) {
-                        Text(viewmodel.article.author ?? "unkown")
-                            .setFont(fontName: .semiBold, size: 16)
+                    HStack {
+                        Image(.newsAuthor)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 50)
                         
-                        Text(viewmodel.article.publishedAt)
-                            .setFont(fontName: .semiBold, size: 14)
-                            .foregroundStyle(Color("#4E4B66"))
+                        VStack(alignment: .leading) {
+                            Text(viewmodel.article.author ?? "unkown")
+                                .setFont(fontName: .semiBold, size: 16)
+                            
+                            Text(viewmodel.article.publishedAt)
+                                .setFont(fontName: .semiBold, size: 14)
+                                .foregroundStyle(Color("#4E4B66"))
+                        }
+                        
+                        Spacer()
+                        
+                    }
+                    .padding(.horizontal,10)
+                    
+                    
+                    CustomAsyncImage(img: viewmodel.article.urlToImage ?? "") { img in
+                        img
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 380,height: 248)
+                            .clipShape(.rect(cornerRadii: .init(topLeading: 6, bottomLeading: 6, bottomTrailing: 6, topTrailing: 6)))
+                    }
+                    
+                    
+                    Text(viewmodel.article.title)
+                        .padding(.leading,6)
+                        .setFont(fontName: .regular, size: 24)
+                    
+                    
+                    Text(viewmodel.article.content)
+                        .padding(.leading,6)
+                        .setFont(fontName: .regular, size: 16)
+                        .foregroundStyle(Color("#4E4B66"))
+                        .padding(.bottom,30)
+                    
+                    CustomButton(buttonTitle: "Read More") {
+                        viewmodel.showSafari = true
                     }
                     
                     Spacer()
-                    
                 }
-                .padding(.horizontal,10)
-                
-                
-                CustomAsyncImage(img: viewmodel.article.urlToImage ?? "") { img in
-                    img
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 380,height: 248)
-                        .clipShape(.rect(cornerRadii: .init(topLeading: 6, bottomLeading: 6, bottomTrailing: 6, topTrailing: 6)))
-                }
-                    
-                
-                Text(viewmodel.article.title)
-                    .padding(.leading,6)
-                    .setFont(fontName: .regular, size: 24)
-                
-                
-                Text(viewmodel.article.content)
-                    .padding(.leading,6)
-                    .setFont(fontName: .regular, size: 16)
-                    .foregroundStyle(Color("#4E4B66"))
-                    .padding(.bottom,30)
-                
-                CustomButton(buttonTitle: "Read More") {
-                    viewmodel.showSafari = true
-                }
-                
-                Spacer()
+                .padding(.vertical)
+                .padding(.horizontal,20)
             }
-            .padding(.vertical)
-            .padding(.horizontal,20)
-        }
-        .padding(.vertical,10)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Button(action: {
-                    viewmodel.shareContent()
-                }) {
-                    Image(.share)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30)
+            .padding(.vertical,10)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        viewmodel.shareContent()
+                    }) {
+                        Image(.share)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 30)
+                    }
+                    .frame(width: 50,height: 50)
                 }
-                .frame(width: 50,height: 50)
             }
-        }
-        .safariView(isPresented: $viewmodel.showSafari) {
-            SafariView(
-                url: URL(string: viewmodel.article.url)!,
-                configuration: SafariView.Configuration(
-                    entersReaderIfAvailable: false,
-                    barCollapsingEnabled: true
+            .safariView(isPresented: $viewmodel.showSafari) {
+                SafariView(
+                    url: URL(string: viewmodel.article.url)!,
+                    configuration: SafariView.Configuration(
+                        entersReaderIfAvailable: false,
+                        barCollapsingEnabled: true
+                    )
                 )
-            )
+            }
         }
+        .navigationTitle(Text("Article details"))
         
     }
 }

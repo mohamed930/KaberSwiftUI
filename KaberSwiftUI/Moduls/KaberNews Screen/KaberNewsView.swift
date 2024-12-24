@@ -15,97 +15,103 @@ struct KaberNewsView: View {
     
     var body: some View {
         NavigationStack(path: $navigationManager.path) {
-            VStack {
-                Text("News")
-                    .setFont(fontName: .bold, size: 20)
+            ZStack {
                 
-                ZStack {
+                Color(.backgroundScreen)
+                    .ignoresSafeArea(.all)
+                
+                VStack {
+                    Text("News")
+                        .setFont(fontName: .bold, size: 20)
                     
-                    VStack(spacing: 26) {
-                        HStack {
-                            Image(.kaberLogo)
-                            Spacer()
-                        }
+                    ZStack {
                         
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray) // Magnifying glass color
-                                .padding(.leading, 16)
-
-                            TextField("Search", text: $viewmodel.searchText)
-                                .foregroundColor(.black) // Text color
-                                .setFont(fontName: .regular, size: 14)
-                                .frame(height: 46)
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color("#4E4B66"), lineWidth: 1) // Border styling
-                        )
-                        .frame(height: 40) // Adjust the height
-                        
-                        ScrollView {
-                            LazyVStack(spacing: 16) {
-                                ForEach(viewmodel.newsItems.indices, id: \.self) { index in
-                                    
-                                    NewsComponets(articleModel: $viewmodel.newsItems[index]) {
+                        VStack(spacing: 26) {
+                            HStack {
+                                Image(.kaberLogo)
+                                Spacer()
+                            }
+                            
+                            HStack {
+                                Image(systemName: "magnifyingglass")
+                                    .foregroundColor(Color(.searchTextField)) // Magnifying glass color
+                                    .padding(.leading, 16)
+                                
+                                TextField("", text: $viewmodel.searchText,prompt: Text("Search")
+                                    .foregroundColor(Color(.searchTextField)))
+                                    .setFont(fontName: .regular, size: 14)
+                                    .frame(height: 46)
+                            }
+                            .background(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color("#4E4B66"), lineWidth: 1) // Border styling
+                            )
+                            .frame(height: 40) // Adjust the height
+                            
+                            ScrollView {
+                                LazyVStack(spacing: 16) {
+                                    ForEach(viewmodel.newsItems.indices, id: \.self) { index in
                                         
-                                        viewmodel.returnUrl(selectedIndex: index)
-                                        
-                                    }
-                                    .onTapGesture {
-                                        let selected = viewmodel.selectElement(index: index)
-                                        navigationManager.path.append(selected)
-                                    }
-                                    .onAppear {
-                                        if index == viewmodel.newsItems.count - 1 {
-                                            print("Reached the last element")
-                                            Task {
-                                                await viewmodel.fetchMoreData()
+                                        NewsComponets(articleModel: $viewmodel.newsItems[index]) {
+                                            
+                                            viewmodel.returnUrl(selectedIndex: index)
+                                            
+                                        }
+                                        .onTapGesture {
+                                            let selected = viewmodel.selectElement(index: index)
+                                            navigationManager.path.append(selected)
+                                        }
+                                        .onAppear {
+                                            if index == viewmodel.newsItems.count - 1 {
+                                                print("Reached the last element")
+                                                Task {
+                                                    await viewmodel.fetchMoreData()
+                                                }
                                             }
                                         }
                                     }
                                 }
                             }
+                            .scrollDismissesKeyboard(.immediately)
+                            
+                            LoadingComponents(isloading: $viewmodel.showMoreLoading)
+                            
                         }
-                        .scrollDismissesKeyboard(.immediately)
-            
-                        LoadingComponents(isloading: $viewmodel.showMoreLoading)
+                        
+                        VStack {
+                            Spacer()
+                            
+                            ErrorView(showError: $viewmodel.showConnectionError)
+                        }
+                        .padding(.bottom,20)
                         
                     }
                     
-                    VStack {
-                        Spacer()
-                        
-                        ErrorView(showError: $viewmodel.showConnectionError)
-                    }
-                    .padding(.bottom,20)
                     
+                    Spacer()
                 }
-                
-                
-                Spacer()
-            }
-            .padding(.vertical)
-            .padding(.horizontal,20)
-            .handleLoading(isLoading: $viewmodel.isloading)
-            .onAppear {
-                Task { @MainActor in
-                    if !viewmodel.dataFetched {
-                        await viewmodel.fetchData()
+                .padding(.vertical)
+                .padding(.horizontal,20)
+                .handleLoading(isLoading: $viewmodel.isloading)
+                .onAppear {
+                    Task { @MainActor in
+                        if !viewmodel.dataFetched {
+                            await viewmodel.fetchData()
+                        }
                     }
                 }
-            }
-            .navigationDestination(for: ArticleModel.self) { article in
-                KaberNewsDetailsView(viewmodel: KaberNewsDetailsViewModel(article: article))
-            }
-            .safariView(isPresented: $viewmodel.showSafari) {
-                SafariView(
-                    url: viewmodel.selectedUrl!,
-                    configuration: SafariView.Configuration(
-                        entersReaderIfAvailable: false,
-                        barCollapsingEnabled: true
+                .navigationDestination(for: ArticleModel.self) { article in
+                    KaberNewsDetailsView(viewmodel: KaberNewsDetailsViewModel(article: article))
+                }
+                .safariView(isPresented: $viewmodel.showSafari) {
+                    SafariView(
+                        url: viewmodel.selectedUrl!,
+                        configuration: SafariView.Configuration(
+                            entersReaderIfAvailable: false,
+                            barCollapsingEnabled: true
+                        )
                     )
-                )
+                }
             }
         }
     }
