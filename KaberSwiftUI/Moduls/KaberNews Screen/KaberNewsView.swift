@@ -32,21 +32,30 @@ struct KaberNewsView: View {
                                 Spacer()
                             }
                             
-                            HStack {
-                                Image(systemName: "magnifyingglass")
-                                    .foregroundColor(Color(.searchTextField)) // Magnifying glass color
-                                    .padding(.leading, 16)
+                            Button {
+                                // MARK: - Move to search Result screen.
+                                navigationManager.path.append("")
+                            } label: {
+                                HStack {
+                                    Image(systemName: "magnifyingglass")
+                                        .foregroundColor(Color(.searchTextField)) // Magnifying glass color
+                                        .padding(.leading, 16)
+                                    
+                                    Text("Search")
+                                        .foregroundColor(Color(.searchTextField))
+                                        .setFont(fontName: .regular, size: 14)
+                                    
+                                    Spacer()
+                                }
+                                .frame(maxWidth: .infinity, idealHeight: 40) // Adjust the height
+                                .padding()
+                                .background(
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color("#4E4B66"), lineWidth: 1) // Border styling
+                                )
                                 
-                                TextField("", text: $viewmodel.searchText,prompt: Text("Search")
-                                    .foregroundColor(Color(.searchTextField)))
-                                    .setFont(fontName: .regular, size: 14)
-                                    .frame(height: 46)
                             }
-                            .background(
-                                RoundedRectangle(cornerRadius: 8)
-                                    .stroke(Color("#4E4B66"), lineWidth: 1) // Border styling
-                            )
-                            .frame(height: 40) // Adjust the height
+
                             
                             ScrollView {
                                 LazyVStack(spacing: 16) {
@@ -102,6 +111,9 @@ struct KaberNewsView: View {
                 }
                 .navigationDestination(for: ArticleModel.self) { article in
                     KaberNewsDetailsView(viewmodel: KaberNewsDetailsViewModel(article: article))
+                }
+                .navigationDestination(for: String.self) { _ in
+                    SearchView()
                 }
                 .safariView(isPresented: $viewmodel.showSafari) {
                     SafariView(

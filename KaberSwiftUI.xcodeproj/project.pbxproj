@@ -58,6 +58,9 @@
 		D39EA0AA2D158283006D9027 /* ShardCheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39EA0A92D158283006D9027 /* ShardCheckConnection.swift */; };
 		D39EA0AC2D15861D006D9027 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39EA0AB2D15861D006D9027 /* LocalStorage.swift */; };
 		D39EA0AF2D158DAE006D9027 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39EA0AE2D158DAE006D9027 /* ErrorView.swift */; };
+		D3FA3EF82D1AE41A003AF229 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA3EF72D1AE41A003AF229 /* SearchView.swift */; };
+		D3FA3EFA2D1AE426003AF229 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA3EF92D1AE426003AF229 /* SearchViewModel.swift */; };
+		D3FA3EFD2D1AE77A003AF229 /* SeearchResultComponets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FA3EFC2D1AE77A003AF229 /* SeearchResultComponets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +114,9 @@
 		D39EA0A92D158283006D9027 /* ShardCheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShardCheckConnection.swift; sourceTree = "<group>"; };
 		D39EA0AB2D15861D006D9027 /* LocalStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		D39EA0AE2D158DAE006D9027 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D3FA3EF72D1AE41A003AF229 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D3FA3EF92D1AE426003AF229 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		D3FA3EFC2D1AE77A003AF229 /* SeearchResultComponets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeearchResultComponets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +204,7 @@
 			children = (
 				D37CD9342D119437007CDB0A /* KaberNews Screen */,
 				D37CD96D2D11B048007CDB0A /* KaberNews Details Screen */,
+				D3FA3EF62D1AE3FE003AF229 /* Search Screen */,
 			);
 			path = Moduls;
 			sourceTree = "<group>";
@@ -214,6 +221,7 @@
 		D37CD9372D11961B007CDB0A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				D3FA3EFB2D1AE756003AF229 /* Search result components */,
 				D3730F252D16D6B500CF901A /* Loading Componets */,
 				D39EA0AD2D158D92006D9027 /* Error Componets */,
 				D37CD93B2D11A40B007CDB0A /* Custom Button */,
@@ -367,6 +375,23 @@
 			path = "Error Componets";
 			sourceTree = "<group>";
 		};
+		D3FA3EF62D1AE3FE003AF229 /* Search Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA3EF92D1AE426003AF229 /* SearchViewModel.swift */,
+				D3FA3EF72D1AE41A003AF229 /* SearchView.swift */,
+			);
+			path = "Search Screen";
+			sourceTree = "<group>";
+		};
+		D3FA3EFB2D1AE756003AF229 /* Search result components */ = {
+			isa = PBXGroup;
+			children = (
+				D3FA3EFC2D1AE77A003AF229 /* SeearchResultComponets.swift */,
+			);
+			path = "Search result components";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -487,10 +512,13 @@
 				D38855802D12DCD300596C9C /* NewsAPI.swift in Sources */,
 				D39EA0A82D15826C006D9027 /* CheckConnection.swift in Sources */,
 				D332A3B72D12007C00EDB1AE /* ArticleModel.swift in Sources */,
+				D3FA3EF82D1AE41A003AF229 /* SearchView.swift in Sources */,
 				D332A3B42D11FEFB00EDB1AE /* NavigationPathManager.swift in Sources */,
 				D38855692D12DBED00596C9C /* BaseApi.swift in Sources */,
+				D3FA3EFA2D1AE426003AF229 /* SearchViewModel.swift in Sources */,
 				D37CD93A2D11963F007CDB0A /* NewsComponets.swift in Sources */,
 				D39EA0AC2D15861D006D9027 /* LocalStorage.swift in Sources */,
+				D3FA3EFD2D1AE77A003AF229 /* SeearchResultComponets.swift in Sources */,
 				D37CD93D2D11A418007CDB0A /* CustomButton.swift in Sources */,
 				D3730F272D16D6CA00CF901A /* LoadingComponents.swift in Sources */,
 				D39EA0AA2D158283006D9027 /* ShardCheckConnection.swift in Sources */,

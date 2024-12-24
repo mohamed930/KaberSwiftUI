@@ -14,8 +14,6 @@ class KaberNewsViewModel: ObservableObject {
     private let api = NewsAPI()
     private var page: Int = 1
     
-    @Published var searchText: String = ""
-    
     @Published var isloading: Bool = false
     @Published var dataFetched: Bool = false
     @Published var newsItems: [ArticleModel] = []

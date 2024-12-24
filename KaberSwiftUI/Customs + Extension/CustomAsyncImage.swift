@@ -9,10 +9,12 @@ import SwiftUI
 
 struct CustomAsyncImage<Content: View>: View {
     let img: String
+    var errorImageSize: CGFloat = 183
     let content: (Image) -> Content
     
-    init(img: String, @ViewBuilder content: @escaping (Image) -> Content) {
+    init(img: String,errorImageSize: CGFloat = 183, @ViewBuilder content: @escaping (Image) -> Content) {
         self.img = img
+        self.errorImageSize = errorImageSize
         self.content = content
     }
     
@@ -28,7 +30,7 @@ struct CustomAsyncImage<Content: View>: View {
                 Image(.newsImages)
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 183)
+                    .frame(width: errorImageSize)
             @unknown default:
                 EmptyView()
             }
