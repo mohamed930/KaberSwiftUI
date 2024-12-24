@@ -73,7 +73,7 @@ class KaberNewsViewModel: ObservableObject {
                 
                 self.isloading = false
                 self.showMoreLoading = false
-                if self.newsItems.isEmpty {
+                if self.newsItems.isEmpty || page == 1 {
                     self.newsItems = response.articles
                 }
                 else {
