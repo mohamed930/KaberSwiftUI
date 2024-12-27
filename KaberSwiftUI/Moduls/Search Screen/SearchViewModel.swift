@@ -29,7 +29,7 @@ class SearchViewModel: ObservableObject {
     
     private func setupDebounce() {
         $searchText
-            .debounce(for: .seconds(1.0), scheduler: DispatchQueue.main) // Debounce for 1.0 seconds
+        .debounce(for: .seconds(1.0), scheduler: DispatchQueue.main) // Debounce for 1.0 seconds
         .removeDuplicates() // Optional: Avoid triggering for the same value
         .sink { [weak self] newText in
             guard let self = self else { return }
