@@ -15,10 +15,6 @@ To deploy this project run
   git clone https://github.com/mohamed930/Kaber.git
 ```
 
-```bash
-  pod install
-```
-
 
 ## API Reference
 
